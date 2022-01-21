@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Parisienne&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4a305f68d3.js" crossorigin="anonymous"></script>
+    <title>RichText</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            height: 100%;
+        }
+
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            background-color: #b2bec3;
+        }
+
+        .content{
+            font-family: 'Poppins', sans-serif;
+            width: 45%;
+            height: 55%;
+            background-color: #ffffff;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 21px 5px rgba(0,0,0,0.20);
+        }
+
+        .content .text-editor-header{
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            width: 100%;
+            height: 40px;
+            border-bottom: 3px solid #888a8d;
+            padding-bottom: 10px;
+        }
+
+        .content .text-editor-header button{
+            cursor: pointer;
+            color: #13161a;
+            padding-right: 20px;
+            display: inline-block;
+            font-weight: 700;
+            font-size: 20px;
+            background-color: transparent;
+            border: none;
+        }
+        .textarea{
+            margin-top: 15px;
+            width: 100%;
+            height: 80%;
+            outline: none;
+            font-size: 20px;
+        }
+
+        blockquote {
+            background: #dfe6e9;
+            border-left: 10px solid #8e44ad;
+            margin: 1em 10px;
+            padding: 0.5em 10px;
+            quotes: "\201C""\201D""\2018""\2019";
+            font-size: 1.5em !important;
+            font-family: 'Parisienne', cursive;
+            }
+        blockquote:before {
+            color: #8e44ad;
+            content: open-quote;
+            font-size: 4em;
+            line-height: 0.1em;
+            margin-right: 0.25em;
+            vertical-align: -0.4em;
+            
+        }
+        blockquote p {
+            display: inline;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="text-editor-header">
+            <ul>
+                <button type="button" class="btn" data-element="title">
+                    T
+                </button>
+                <button type="button" class="btn" data-element="bold">
+                    B
+                </button>
+                <button type="button" class="btn" data-element="italic">
+                    <i>I</i>
+                </button>
+                <button type="button" class="btn" data-element="insertUnorderedList">
+                    <i class="fas fa-list"></i>
+                </button>
+                <button type="button" class="btn" data-element="formatBlock">
+                    <i class="fas fa-quote-right"></i>
+                </button>
+                <button type="button" class="btn" data-element="createLink">
+                    <i class="fas fa-link"></i>
+                </button>
+            </ul>
+        </div>
+        <div class="textarea" contenteditable="true"></div>
+    </div>
+    <script src="./js.js"></script>
+</body>
+</html>
